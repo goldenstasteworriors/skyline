@@ -99,6 +99,9 @@ int main(void)
   MX_ADC1_Init();
   MX_CAN1_Init();
   MX_IWDG_Init();
+  MX_TIM1_Init();
+  MX_TIM5_Init();
+  MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
