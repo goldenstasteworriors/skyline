@@ -27,7 +27,9 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "FreeRTOS.h"
+#include "task.h"
+#include "list.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <pid.h>
@@ -52,7 +54,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+TaskHandle_t xLedTask;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -63,6 +65,19 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void vLedTask(void * param)
+{
+
+	volatile int i=0;
+	while (1)
+	{
+		HAL_GPIO_WritePin(GPIOF,GPIO_PIN_9,GPIO_PIN_RESET);
+		HAL_Delay(1000);
+		HAL_GPIO_WritePin(GPIOF,GPIO_PIN_9,GPIO_PIN_SET);
+		HAL_Delay(1000);
+	}
+}
+
 
 /* USER CODE END 0 */
 
@@ -116,6 +131,27 @@ int main(void)
   MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
 	Motor_Init();
+	
+	xTaskCreate(vLedTask, "Task1", 100 , NULL, 1,&xLedTask);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	vTaskStartScheduler();
   /* USER CODE END 2 */
 
   /* Infinite loop */

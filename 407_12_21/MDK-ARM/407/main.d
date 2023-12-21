@@ -49,5 +49,14 @@
 407\main.o: ../Core/Inc/usart.h
 407\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 407\main.o: ../Core/Inc/gpio.h
+407\main.o: ..\FreeRTOS\include\FreeRTOS.h
+407\main.o: ..\FreeRTOS\FreeRTOSConfig.h
+407\main.o: ..\FreeRTOS\include\projdefs.h
+407\main.o: ..\FreeRTOS\include\portable.h
+407\main.o: ..\FreeRTOS\include\deprecated_definitions.h
+407\main.o: ..\FreeRTOS\portable\RVDS\ARM_CM4F\portmacro.h
+407\main.o: ..\FreeRTOS\include\mpu_wrappers.h
+407\main.o: ..\FreeRTOS\include\task.h
+407\main.o: ..\FreeRTOS\include\list.h
 407\main.o: ../Core/Inc/pid.h
 407\main.o: ../Core/Inc/Motor.h
