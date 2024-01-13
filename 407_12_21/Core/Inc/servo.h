@@ -17,9 +17,9 @@
 #define SERVODEGREEUNIT2 (SERVOMAX2-SERVOMIN2)/MAXANGLE2
 #define SERVODEGREEUNIT3 (SERVOMAX3-SERVOMIN3)/MAXANGLE3
 #define SERVODEGREEUNIT4 (SERVOMAX4-SERVOMIN4)/MAXANGLE4
-void servoInit();
-void servoSetAngle1();
-void servoSetAngle2();
-void servoSetAngle3();
-void servoSetAngle4();
+void servoInit(void);
+void servoSetAngle1(int angle);
+void servoSetAngle2(int angle);
+void servoSetAngle3(int angle);
+void servoSetAngle4(int angle);
 #endif
